@@ -1,0 +1,32 @@
+# Local Python environment and artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Credentials and local configuration
+.streamlit/secrets.toml
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Private projects, generated data and regression fixtures
+tests/regression/data/
+*.log
+.DS_Store
+Thumbs.db
+
+# Never publish real customer schedules or local spreadsheet exports
+*.xer
+!examples/*.xer
+*.xlsx
+*.xls
+*.csv

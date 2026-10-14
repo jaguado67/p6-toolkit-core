@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "p6-toolkit-core"
+version = "0.2.2"
+description = "XER-driven, auditable Primavera P6 schedule analytics core"
+requires-python = ">=3.10"
+authors = [{name = "P6 Toolkit Project"}]
+dependencies = ["networkx>=3.1", "pandas>=2.0", "openpyxl>=3.1"]
+
+[project.optional-dependencies]
+ui = ["streamlit>=1.35", "plotly>=5.20"]
+dev = ["pytest>=7.4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
